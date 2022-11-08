@@ -1,0 +1,28 @@
+// акцент #2196F3
+// основний текст #757575
+// додактковий текст #212121
+// основний фон #F5F5F5
+// другорядний фон #F5F4FA
+// другорядний колір для стилізації 1 #2F303A
+// другорядний колір для стилізації 2 #000000
+// другорядний колір для стилізації 3 #FFFFFF
+// основний маржин 30 px
+// тінь карти команди  0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2)
+// функція часу cubic-bezier(0.4, 0, 0.2, 1)
+
+:root{
+    --accent-color: #2196F3;
+    --primmary-text-color:  #757575;
+    --secondary-text-color: #212121;
+    --primary-bg-color:#F5F5F5;
+    --secondary-bg-color:#F5F4FA;
+    --secondary-color1: #2F303A;
+    --secondary-color2: #000000;
+    --secondary-color3:#FFFFFF;
+    --decoration-color:#AFB1B8;
+    --set-gap:30px;
+    --set-shadow:0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --bg-gradient: rgba(47, 48, 58, 0.4);
+    }
+    

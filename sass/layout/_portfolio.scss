@@ -1,0 +1,126 @@
+.portfolio{
+   @extend %section;
+    background-color: var(--secondary-color3);
+}
+
+.portfoliio__container{
+    @extend %container;
+}
+
+.portfolio__title{
+    @extend %visually-hidden;
+}
+
+// Filter
+.project-filter__list{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    &>li:not(:first-child){
+        margin-left: 8px;
+    }
+
+}
+
+.project__list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--set-gap));
+    margin-top: calc(-1 * var(--set-gap));
+}
+
+.project__item {
+    flex-basis: calc(100% / 3 - var(--set-gap));
+    margin-left: var(--set-gap);
+    margin-top: var(--set-gap);
+  }
+
+.project__thumb{
+    display: block;
+    position: relative;
+    overflow: hidden;
+
+    &::before{
+        display: inline-block;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;    
+        height: 100%;
+        background: rgba(33, 150, 243, 0.9);
+        transform: translateY(100%);
+        transition: transform 250ms var(--timing-function);
+    }
+    
+}
+
+.project__description{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, 150%);
+    transition: transform 250ms var(--timing-function);
+    width: 100%;
+    overflow: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    color:var(--secondary-color3);
+}
+
+.project__content{
+    border-left:1px solid #EEEEEE;
+    border-bottom:1px solid #EEEEEE;
+    border-right:1px solid #EEEEEE;
+    padding-top: 20px;
+    padding-right: 24px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+}
+
+.project__title{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    color:var(--secondary-text-color);
+    letter-spacing: 0.06em;
+}
+
+.project__type{
+    margin-top: 4px;
+    font-size: 16px;
+    line-height: 1.87;
+    color: var(--primmary-text-color);
+}
+
+.project__link{
+    display: block;
+    position: relative;
+    text-decoration: none;
+    transition: box-shadow 250ms var(--timing-function);
+    @extend %link;
+
+    &:hover, 
+    &:focus {
+        box-shadow: 
+        0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    &:hover .project__thumb::before{
+        transform: translateY(0);
+    }
+        &:hover .project__description{
+        transform: translate(-50%,-50%);
+    }
+}
+

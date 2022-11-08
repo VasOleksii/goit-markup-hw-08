@@ -1,0 +1,119 @@
+//MOBILE MENU
+.mob-menu-social-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .mob-menu-social-list__item {
+    padding-left: 10px;
+  
+    &:first-child {
+      padding-left: 0;
+      padding-right: 10px;
+    }
+  
+    &:not(:last-child) {
+      padding-right: 10px;
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+  }
+  
+  .mob-menu-social-list__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+     color: var(--accent-color);
+     @extend %link;
+}
+//TEAM
+.social-networks{
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.social-networks__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: background-color 250ms var(--timing-function);
+
+    &:hover,
+    &:focus{
+    background-color: var(--accent-color);
+}
+
+    &:hover .social-networks__icon,
+    &:focus .social-networks__icon{
+    fill: var(--secondary-color3);
+}
+}
+
+.social-networks__icon{
+    fill:var(--decoration-color);
+    transition: fill 250ms var(--timing-function);
+}
+
+//FOOTER
+.footer-social-networks{
+    text-align: center;
+    margin-bottom: 60px;
+    @media screen and (min-width:768px) {
+        margin-bottom: 102px;
+        
+    }
+    @media screen and (min-width:1200px) {
+        margin-bottom: 0;
+        margin-left: 70px;
+        text-align: left;
+    }
+   
+}
+.footer-social-networks__text{
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--secondary-color3);
+
+}
+
+.footer-social-networks__list{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.footer-social-networks__link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 250ms var(--timing-function);
+
+    &:hover,
+    &:focus{
+        background-color: var(--accent-color);
+    }
+}
+
+.footer-social-networks__icon{
+    fill: var(--secondary-color3);
+}

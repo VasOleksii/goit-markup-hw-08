@@ -1,0 +1,225 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 250ms var(--timing-function),
+    visibility 250ms var(--timing-function);
+
+    &.is-hidden .modal{
+        transform: translate(-50%, -50%) scale(5) rotate(-360deg);
+    }
+}
+
+.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;    
+
+    @media screen and (min-width: 768px) {
+        width: 450px;
+      }
+    
+      @media screen and (min-width: 1200px) {
+        width: 528px;
+        height: 581px;
+      }
+}
+
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 40px;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    transition: 
+    transform 250ms var(--timing-function),
+    opacity 250ms var(--timing-function);
+    width:450px;
+    height: 609px;
+      
+    background-color: var(--secondary-color3);
+    box-shadow: var(--set-shadow);
+    border-radius: 4px;
+
+    @media screen and (min-width: 1200px) {
+        width: 528px;
+        height: 581px;
+    }
+
+
+}
+
+.form{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form__text{
+    margin-bottom: 12px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: var(--secondary-text-color);
+
+    @media screen and (min-width: 1200px) {
+        line-height: 1.15;
+    }
+    
+}
+
+.form__field{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+
+.form__label{
+    display: flex;
+    align-items: center;
+    height: 14px;
+    margin-bottom: 4px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: var(--primmary-text-color);
+}
+
+.form__input{
+    height: 40px;
+    width: 100%;
+    padding-left: 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: border 250ms var(--timing-function);
+    &:hover,
+    &:focus {
+        border: 1px solid var(--accent-color);
+    }
+
+    &:focus + .form__icon, 
+    &:hover + .form__icon {
+    fill: var(--accent-color);
+}
+}
+
+.form__icon{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transition: fiil 250ms var(--timing-function);
+   
+    &:hover,
+    &:focus {
+    fill: var(--accent-color);
+    }
+}
+
+textarea {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 12px;
+    resize: none;
+    width: 370px;
+    height: 120px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    fill: currentColor;
+    transition: border 250ms var(--timing-function);
+
+    @media screen and (min-width: 1200px) {
+        width: 448px;
+      }
+
+    &:hover,
+    &:focus {
+     border: 1px solid var(--accent-color);
+   }
+}
+
+.agreement{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--primmary-text-color);
+}
+
+.agreement__text{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+
+    @media screen and (min-width:1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+    }
+
+}
+
+.agreement__check{
+    appearance: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+    &:checked + .agreement__icon {
+        border-color: var(--accent-color);
+        background-color: var(--accent-color);
+        background-image:  url(../images/check-icon.svg);   
+        background-size: contain;
+        background-origin: border-box;
+      }
+}
+
+.agreement__icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+    border: 2px solid var(--secondary-text-color);
+    border-radius: 2px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+
+    @media screen and (min-width: 1200px) {
+        margin-left: 14px;
+      }
+
+}
+
+.agreement__link{
+    color: var(--accent-color)
+}
