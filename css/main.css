@@ -40,12 +40,12 @@
   text-decoration: none;
 }
 
-.portfolio, .footer, .clients, .team, .work, .features {
+.portfolio, .clients, .team, .work, .features {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
-  .portfolio, .footer, .clients, .team, .work, .features {
+  .portfolio, .clients, .team, .work, .features {
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -1081,6 +1081,8 @@ textarea:hover, textarea:focus {
 }
 
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--secondary-color1);
 }
 
