@@ -1,5 +1,6 @@
 .features{
     @extend %section;
+    padding-bottom: 0;
 }
 
 .features_container{
@@ -9,11 +10,6 @@
 .content__title{
     @extend %visually-hidden;
 }
-
-
-.features__title{
-    @extend %section-title;
-    }
 
 .feature__list{
     display: flex;
@@ -32,12 +28,14 @@
                 flex-basis: calc(100% / 2 - var(--set-gap));
                 margin-left: var(--set-gap);
                 margin-top: var(--set-gap);
+                text-align:left;
             }
             
             @media screen and (min-width:1200px) {
                 flex-basis: calc(100% / 4 - var(--set-gap));
                 margin-left: var(--set-gap);
                 margin-top: var(--set-gap);
+                text-align:left;
             }
         }
 

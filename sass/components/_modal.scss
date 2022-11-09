@@ -39,12 +39,17 @@
     transition: 
     transform 250ms var(--timing-function),
     opacity 250ms var(--timing-function);
-    width:450px;
-    height: 609px;
+    width: calc(100vw - 30px);
+    height: auto;
       
     background-color: var(--secondary-color3);
     box-shadow: var(--set-shadow);
     border-radius: 4px;
+
+       @media screen and (min-width: 480px) {
+        width: 450px;
+        height: 609px;
+      }
 
     @media screen and (min-width: 1200px) {
         width: 528px;
@@ -136,7 +141,7 @@ textarea {
     padding-right: 16px;
     padding-bottom: 12px;
     resize: none;
-    width: 370px;
+    width: 100%;
     height: 120px;
     font-weight: 400;
     font-size: 12px;
@@ -149,11 +154,7 @@ textarea {
     fill: currentColor;
     transition: border 250ms var(--timing-function);
 
-    @media screen and (min-width: 1200px) {
-        width: 448px;
-      }
-
-    &:hover,
+     &:hover,
     &:focus {
      border: 1px solid var(--accent-color);
    }
